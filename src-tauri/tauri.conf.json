@@ -10,31 +10,14 @@
     "productName": "tauri-app",
     "version": "0.0.0"
   },
+  "plugins": 
+    {
+      "name": "cli"
+    }
+  ,
   "tauri": {
     "allowlist": {
-      "all": true,
-      "shell": {
-        "all": true
-      
-      },
-      "os": {
-        "all": true
-      },
-      "path": {
-        "all": true
-      },
-      "fs": {
-        "all": true,
-        "readFile": true,
-        "writeFile": true,
-        "readDir": true,
-        "copyFile": true,
-        "createDir": true,
-        "removeDir": true,
-        "removeFile": true,
-        "renameFile": true,
-        "exists": true
-      }
+      "all": false
     },
     "windows": [
       {
