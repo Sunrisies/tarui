@@ -10,14 +10,32 @@
     "productName": "tauri-app",
     "version": "0.0.0"
   },
-  "plugins": 
-    {
-      "name": "cli"
-    }
-  ,
+  "plugins": {
+    "name": "cli"
+  },
   "tauri": {
     "allowlist": {
-      "all": false
+      "all": false,
+      "path": {
+        "all": true
+      },
+      "fs": {
+        "all": true,
+        "readFile": true,
+        "scope": ["$APPDATA/","C:\\Users\\hover\\Desktop\\test\\pc\\my-tauti\\tauri-app"],
+        "writeFile": true,
+        "readDir": true,
+        "copyFile": true,
+        "createDir": true,
+        "removeDir": true,
+        "removeFile": true,
+        "renameFile": true,
+        "exists": true
+      },"http": {
+        "all": true, 
+        "request": true ,
+        "scope": ["http://baidu.com/","http://localhost:3000"]
+      }
     },
     "windows": [
       {
