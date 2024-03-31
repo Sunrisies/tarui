@@ -19,10 +19,14 @@
       "path": {
         "all": true
       },
+      "dialog": {
+        "all": false,
+        "open": true
+    },
       "fs": {
         "all": true,
         "readFile": true,
-        "scope": ["$APPDATA/","C:\\Users\\hover\\Desktop\\test\\pc\\my-tauti\\tauri-app"],
+        "scope": ["$APPDATA/databases/*","C:\\Users\\hover\\Desktop\\test\\pc\\my-tauti\\tauri-app","/Users/zhuzhongqian/Desktop/*"],
         "writeFile": true,
         "readDir": true,
         "copyFile": true,
@@ -40,8 +44,8 @@
     "windows": [
       {
         "title": "tauri-app",
-        "width": 800,
-        "height": 600
+        "width": 1200,
+        "height": 800
       }
     ],
     "security": {
