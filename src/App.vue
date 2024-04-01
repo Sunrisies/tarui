@@ -1,33 +1,33 @@
 <script setup lang="ts">
-import { useRouter } from 'vue-router'
+import { useCounterStore } from './stores/index'
 const router = useRouter()
+const counter = useCounterStore()
 const goTo = (path: string) => {
   console.log(path, 'path')
-   router.push(path)
+  router.push(path)
+}
+const setIncrement = () => {
+  counter.increment()
+console.log(counter.getIncrement(), ' counter')
+
 }
 </script>
 
 <template>
- <div id="app">  
-    <!-- <router-link to="/home">Home</router-link> 
-    <span>     </span>
-    
-
-    <router-link to="/about">About</router-link>   -->
+  <div id="app">
+    <button @click="setIncrement">添加 pinia</button>
+    {{ counter.getIncrement() }}
     <button @click="goTo('home')">home</button>
     <button @click="goTo('About')">About</button>
-    测试
 
-  
-    <router-view></router-view>  
-  </div>  
+    <router-view></router-view>
+  </div>
 </template>
 
 <style scoped>
 #app {
   text-align: center;
-  padding:20px;
+  padding: 20px;
   width: 100%;
 }
-
 </style>

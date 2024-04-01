@@ -3,7 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router';
   
 const routes = [  
   {  
-    path: '/home',  
+    path: '/',  
     name: 'Home',  
     component:()=> import('../pages/index.vue')  
   },  
@@ -12,7 +12,6 @@ const routes = [
     name: 'About',  
     component: () =>import('../pages/about.vue')  
   },  
-  // 更多路由...  
 ];  
   
 const router = createRouter({  
