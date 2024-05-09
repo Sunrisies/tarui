@@ -19,11 +19,15 @@ const router = useRouter()
   width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .left {
-  height: 100%;
-  width: 20%;
-  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 100%;
 }
 .right {
   flex: 1;

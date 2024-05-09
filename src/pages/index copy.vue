@@ -3,9 +3,22 @@ import { ref } from 'vue'
 import { invoke } from '@tauri-apps/api/tauri'
 import { open } from '@tauri-apps/api/dialog'
 import { MdEditor,MdPreview, MdCatalog } from 'md-editor-v3'
+// 读取http://localhost:3000/README.md文件内容
+// const text = ref(
+//   (await (await fetch('http://localhost:3000/README.md')).text()).replace(
+//     /^\s+|\s+$/g,
+//     ''
+//   )
 import 'md-editor-v3/lib/style.css'
 // Open a selection dialog for image files
 const text = ref('# Hello Editor')
+const fetchApi = async() => {
+  const res = await fetch('http://localhost:3000/api/article/')
+  const text = await res.text()
+  console.log(text,'text')
+}
+console.log(1111)
+fetchApi()
 const openApi = async () => {
   await open({
     multiple: true
