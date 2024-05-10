@@ -1,10 +1,16 @@
 <template>
   <div class="container">
-    <div class="left">
+    <div class="top">
       <el-button @click="router.push('/index')">首页</el-button>
       <el-button @click="router.push('about')">关于</el-button>
+      <el-button @click="router.push('profile')">个人中心</el-button>
+      <el-button @click="router.push('setting')">设置</el-button>
+      <el-button @click="router.push('/article')">文章列表</el-button>
+      <el-button @click="router.push('/article/create')">创建文章</el-button>
+      <el-button @click="router.push('article/edit')">编辑文章</el-button>
+      <el-button @click="router.push('article/detail')">文章详情</el-button>
     </div>
-    <div class="right">
+    <div class="content">
       <router-view></router-view>
     </div>
   </div>
@@ -22,15 +28,15 @@ const router = useRouter()
   flex-direction: column;
   align-items: center;
 }
-.left {
+.top {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 50px;
   width: 100%;
 }
-.right {
+.content {
   flex: 1;
-  border:1px solid pink;
+  width:100%;
 }
 </style>

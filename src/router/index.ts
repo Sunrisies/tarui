@@ -19,6 +19,28 @@ const routes = [
         name: 'index',
         component: () => import('../pages/index.vue')
       },
+      {
+        path:'/article',
+        name:'article',
+        component:()=>import('../pages/article.vue'),
+        children:[
+          {
+            path:'/article/:id',
+            name:'articleDetail',
+            component:()=>import('../pages/articleDetail.vue')
+          }
+        ]
+      },
+      {
+        path:'/article/:id',
+        name:'articleDetail',
+        component:()=>import('../pages/articleDetail.vue')
+      },
+      {
+        path:'article/create',
+        name:'createArticle',
+        component:()=>import('../pages/createArticle.vue')
+      }
     ]
   }
   // {
