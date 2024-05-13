@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="article-detail">
     <MdPreview :editorId="id" :modelValue="text" />
     <MdCatalog :editorId="id" :scrollElement="scrollElement" />
   </div>
@@ -23,4 +23,11 @@ const getArticleDetail = async () => {
 getArticleDetail();
 </script>
 
-<style lang="less" scoped></style>
+<style lang="scss" scoped>
+.article-detail {
+  border:1px solid red;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+</style>

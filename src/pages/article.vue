@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="article">
     <div
       v-for="(item, index) in articleList"
       :key="index"
@@ -29,12 +29,21 @@ onMounted(async () => {});
 </script>
 
 <style lang="scss" scoped>
+.article {
+height: 100%;
+width: 100%;
+padding-top:30px;
+display: flex;
+flex-direction: column;
+gap: 20px;
+align-items: center;
+
+}
 .listItem {
   padding: 30px;
   text-align: center;
   border: 1px solid #ccc;
-  margin: 10px 100px;
-  width: 100%;
+  width: 80%;
   border-radius: 30px;
   transition: transform 0.3s ease-out, border-color 0.3s ease-out;
   &:hover {

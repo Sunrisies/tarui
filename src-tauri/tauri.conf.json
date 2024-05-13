@@ -26,7 +26,7 @@
       "fs": {
         "all": true,
         "readFile": true,
-        "scope": ["$APPDATA/databases/*","C:\\Users\\hover\\Desktop\\test\\pc\\my-tauti\\tauri-app","/Users/zhuzhongqian/Desktop/*"],
+        "scope": ["$APPDATA/*","C:\\Users\\hover\\Desktop\\test\\pc\\my-tauti\\tauri-app","/Users/zhuzhongqians/**/*"],
         "writeFile": true,
         "readDir": true,
         "copyFile": true,

@@ -2,11 +2,15 @@
   <div class="create-article">
     <el-input v-model="title" placeholder="请输入文章标题"></el-input>
     <el-button type="primary" @click="addArticle">添加</el-button>
+    <el-button type="primary" @click="createDirApi">保存到本地</el-button>
+    <el-button type="primary" @click="readBinaryFileApi">读取本地</el-button>
+
     <MdEditor v-model="text" class="md-container"></MdEditor>
   </div>
 </template>
 
 <script setup lang="ts">
+import { copyFile, BaseDirectory, createDir, readTextFile ,readDir,writeTextFile} from '@tauri-apps/api/fs'
 import { MdEditor, MdPreview, MdCatalog } from "md-editor-v3";
 import "md-editor-v3/lib/style.css";
 import { publishArticleApi, Article } from "@/api/index";
@@ -41,6 +45,24 @@ const addArticle = async () => {
   //     body: ad,
   //   });
 };
+const copyFileApi = async () => {
+  const data = await copyFile('app.conf', 'app.conf.bk', { dir: BaseDirectory.Desktop })
+  console.log(data, 'data')
+}
+const createDirApi = async () => {
+    console.log(BaseDirectory.AppData, 'BaseDirectory')
+   const d = await writeTextFile('app.md', 'file contents', { dir: BaseDirectory.AppData });
+//   const d = await readBinaryFile('users2', { dir: BaseDirectory.AppData.users, recursive: true })
+  console.log(d, 'ddd')
+}
+const readBinaryFileApi = async () => {
+  const data = await readTextFile('app.md', { dir: BaseDirectory.AppData })
+  console.log(data, 'data')
+}
+const readDirApi = async () => {
+  const data = await readDir('users', { dir: BaseDirectory.AppData,recursive: true })
+  console.log(data, 'data')
+}
 </script>
 
 <style lang="scss" scoped>
