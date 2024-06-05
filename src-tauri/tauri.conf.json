@@ -38,7 +38,7 @@
       },"http": {
         "all": true, 
         "request": true ,
-        "scope": ["http://baidu.com/","http://localhost:3000/api/*", "https://juejin.cn/post/7353877562303021093?utm_source=gold_browser_extension"]
+        "scope": ["http://123.207.197.182:80/api/*","http://localhost:3000/api/*", "https://juejin.cn/post/7353877562303021093?utm_source=gold_browser_extension"]
       }
     },
     "windows": [

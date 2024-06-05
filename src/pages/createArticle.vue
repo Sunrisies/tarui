@@ -36,14 +36,14 @@ const addArticle = async () => {
   };
   const data = await publishArticleApi(params);
   console.log(data, "addArticle");
-  //   const response = await fetch("http://localhost:3000/api/article", {
-  //     timeout: 30,
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //     body: ad,
-  //   });
+    // const response = await fetch("http://localhost:3000/api/article", {
+    //   timeout: 30,
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: ad,
+    // });
 };
 const copyFileApi = async () => {
   const data = await copyFile('app.conf', 'app.conf.bk', { dir: BaseDirectory.Desktop })

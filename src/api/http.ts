@@ -8,7 +8,8 @@ interface ApiResponseData <D> {
   pageSize?: number;
   page?: number;
 }
-const apiUrl = "http://localhost:3000";
+// const apiUrl = "http://localhost:3000";
+const apiUrl = "http://123.207.197.182:80";
 class Http {
   async get<D>(url: string, params?: any) {
     console.log(url, params);
